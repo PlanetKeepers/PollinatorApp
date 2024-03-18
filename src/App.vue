@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <div class="banner-wrapper">
-      <img src="../banner.jpg" alt="Banner" class="bannerImage" />
+      <img src="/banner.jpg" alt="Banner" class="bannerImage" />
       <h1 class="planet-keeper-text akaya">Planet Keeper</h1>
       <h2 class="planet-keeper-subtext akaya">
         An app for our pollinators, <br />
