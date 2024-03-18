@@ -1,26 +1,34 @@
 <template>
   <div class="app">
-    <ArweaveOutlineLogo class="logo" />
+    <div class="banner-wrapper">
+      <img src="../banner.jpg" alt="Banner" class="bannerImage" />
+      <h1 class="planet-keeper-text akaya">Planet Keeper</h1>
+      <h2 class="planet-keeper-subtext akaya">
+        An app for our pollinators, <br />
+        Built with Arweave and ao.
+      </h2>
+    </div>
+
     <!-- link to: baseSourceUrl + /example/ + path -->
     <WalletSelector v-model="inputUrl" class="wallet-selector" />
+    <div class="akaya" style="text-align: justify; max-width: 800px">
+      Connect your wallet to contribute data to pollinator data collection.
+    </div>
     <CodeBox code="npm install arweave-wallet-connector" />
     <CodeBox :code="code[0]" />
-    <div style="text-align: justify; max-width: 800px">
-      The connector is a final link to permanent account managers. Users are not
-      required to install anything and are not restricted to specific device
-      types or operating systems. The system relies on no 3rd party and, once
-      implemented, enables any web page to connect to any wallet provider
-      respecting the standard. This module effectively and permanently provides
-      a communication protocol between decentralized applications hosted on
-      arweave or normal web pages. It leverages web technologies to setup a
-      bridge working entirely on the user device, and even offline if the web
-      apps support it. The connector module itself has no visual element
-      included. This page is an example on how it can be integrated.
+    <div class="akaya" style="text-align: justify; max-width: 800px">
+      Connect your wallet to contribute data to pollinator data collection.
     </div>
-    <a class="button" href="https://github.com/jfbeats/ArweaveWalletConnector">
-      <Github />
-      <span>View on Github</span>
-    </a>
+    <div class="button-container">
+      <a class="button" href="https://github.com/PlanetKeepers">
+        <Github />
+        <span>View on Github</span>
+      </a>
+      <a class="button" href="https://arweave.net/">
+        <img src="../arweave.png" class="arweaveimage" />
+        <span>Learn more about Arweave</span>
+      </a>
+    </div>
     <div />
     <section v-if="currentStep >= 1" id="s1">
       <div class="ellipsis">
@@ -649,7 +657,7 @@ button {
 html {
   background: #111;
   box-sizing: border-box;
-  line-height: 2;
+  line-height: 1;
   scroll-snap-type: y mandatory;
 }
 
@@ -683,5 +691,50 @@ body {
 .ellipsis {
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+.bannerImage {
+  width: 100%;
+  height: auto;
+}
+
+.banner-wrapper {
+  position: relative;
+}
+
+.planet-keeper-text {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Akaya Kanadaka", system-ui;
+  font-size: 58px; /* Adjust font size as needed */
+  color: white;
+  text-align: center;
+}
+.planet-keeper-subtext {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Akaya Kanadaka", system-ui;
+  font-size: 30px; /* Adjust font size as needed */
+  color: white;
+  text-align: center;
+}
+.akaya {
+  font-family: "Akaya Kanadaka", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Adjust spacing between buttons */
+}
+
+.arweaveimage {
+  width: 2.5em; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
 }
 </style>

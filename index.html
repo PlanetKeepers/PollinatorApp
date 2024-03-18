@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html lang="en" class="no-scrollbar">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Quando&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <link rel="icon" href="deereyes.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planet Keeper</title>
+    <script type="module">
+      import { Buffer } from "buffer";
+      if (window.global === undefined) {
+        window.global = window;
+        window.Buffer = Buffer;
+      }
+      const faviconEl = document.createElement("link");
+      faviconEl.setAttribute("rel", "favicon icon");
+      const setFavicon = (e) => {
+        faviconEl.remove();
+        if (e.matches) {
+          faviconEl.setAttribute("href", "deereyes.jpg");
+        } else {
+          faviconEl.setAttribute("href", "deereyes.jpg");
+        }
+        document.head.appendChild(faviconEl);
+      };
+      if (window.matchMedia) {
+        const matchTheme = window.matchMedia("(prefers-color-scheme: light)");
+        matchTheme.addEventListener("change", setFavicon);
+        setFavicon(matchTheme);
+      } else {
+        setFavicon({ matches: false });
+      }
+    </script>
+  </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<link rel="icon" href="plug.svg" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Arweave Wallet Connector Example</title>
-	<script type="module">
-		import { Buffer } from "buffer"
-		if (window.global === undefined) {
-			window.global = window
-			window.Buffer = Buffer
-		}
-		const faviconEl = document.createElement('link')
-		faviconEl.setAttribute('rel', 'favicon icon')
-		const setFavicon = (e) => {
-			faviconEl.remove()
-			if (e.matches) { faviconEl.setAttribute('href', 'plugLightTheme.svg') }
-			else { faviconEl.setAttribute('href', 'plug.svg') }
-			document.head.appendChild(faviconEl)
-		}
-		if (window.matchMedia) {
-			const matchTheme = window.matchMedia('(prefers-color-scheme: light)')
-			matchTheme.addEventListener('change', setFavicon)
-			setFavicon(matchTheme)
-		} else { setFavicon({ matches: false }) }
-	</script>
-</head>
-
-<body>
-	<div id="app"></div>
-	<script type="module" src="/src/main.ts"></script>
-</body>
-
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>
