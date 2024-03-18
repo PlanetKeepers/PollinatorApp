@@ -702,10 +702,6 @@ body {
   height: auto;
 }
 
-.banner-wrapper {
-  position: relative;
-}
-
 .planet-keeper-text {
   position: absolute;
   top: 35%;
