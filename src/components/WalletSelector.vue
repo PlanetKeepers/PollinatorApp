@@ -60,7 +60,7 @@ const connect = () => {
   });
 };
 const disconnect = () => wallet.disconnect();
-const togglePopup = () => (wallet.keepPopup = !wallet.keepPopup);
+const togglePopup = () => (wallet.keepPopup = wallet.keepPopup);
 const popupIcon = computed(() => (wallet.keepPopup ? "close" : "launch"));
 const connectionIcon = computed(() => (wallet.address ? "unplug" : "plug"));
 </script>

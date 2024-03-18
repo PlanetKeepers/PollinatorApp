@@ -224,7 +224,7 @@ watch(
 const message = ref("hello world");
 watch(message, (value) => (transactionData.data = value));
 const transactionData = reactive({
-  target: "TId0Wix2KFl1gArtAT6Do1CbWU_0wneGvS5X9BfW5PE",
+  target: "xA2-DFx2Q-DO7K9drHQcqlPshkDcAWJ1CEOVDM0qqLw",
   quantity: arweave.ar.arToWinston(arInput.value),
   data: message.value,
 });

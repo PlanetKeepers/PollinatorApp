@@ -5,6 +5,7 @@
 - tailwind docs do not list one step of adding the new index.css file as an import to the main.tsx file
 - SQL addition being accepted by vercel
 - the wallet connect import did not work, so I had to use their actual template to add the Arweave wallet connect functionaltiy
+- the wallet connect functionality works on the desktop, but not on the mobile so far.
 
 ```
 
@@ -17,6 +18,7 @@
 ### Building roadmap
 
 - [x] Start new template
+- [x] desktop Arweave wallet connect functionality
 - [x] test SQLite
   - result: worked locally did not pass through vercel so could not include it
 - [] aos PlanetKeeper chatroom
