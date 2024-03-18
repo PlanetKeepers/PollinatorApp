@@ -2,11 +2,15 @@
   <div class="app">
     <div class="banner-wrapper">
       <img src="/banner.jpg" alt="Banner" class="bannerImage" />
-      <h1 class="planet-keeper-text akaya">Planet Keeper</h1>
-      <h2 class="planet-keeper-subtext akaya">
-        An app for our pollinators, <br />
-        built with Arweave and ao.
-      </h2>
+      <div class="textOverlay">
+        <h1 class="planet-keeper-text akaya text-5xl md:text-6xl lg:text-8xl">
+          Planet Keeper
+        </h1>
+        <h2 class="planet-keeper-subtext akaya text-lg md:text-xl lg:text-4xl">
+          An app for our pollinators, <br />
+          built with Arweave and ao.
+        </h2>
+      </div>
     </div>
 
     <!-- link to: baseSourceUrl + /example/ + path -->
@@ -700,33 +704,22 @@ body {
   overflow: hidden;
 }
 
+.imageContainer {
+  position: relative;
+}
+
 .bannerImage {
   width: 100%;
   height: auto;
 }
 
-.banner-wrapper {
-  position: relative;
-}
-
-.planet-keeper-text,
-.planet-keeper-subtext {
+.textOverlay {
   position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  font-family: "Akaya Kanadaka", system-ui;
-  color: white;
+  transform: translate(-50%, -50%);
   text-align: center;
-}
-
-.planet-keeper-text {
-  top: 30%; /* Adjust top position as needed */
-  font-size: 58px; /* Adjust font size as needed */
-}
-
-.planet-keeper-subtext {
-  top: 50%; /* Adjust top position as needed */
-  font-size: 30px; /* Adjust font size as needed */
+  color: white;
 }
 
 /* Media query for smaller screens */
@@ -738,6 +731,10 @@ body {
   .planet-keeper-subtext {
     font-size: 20px; /* Adjust font size for smaller screens */
   }
+}
+
+.imageContainer {
+  position: relative;
 }
 .akaya {
   font-family: "Akaya Kanadaka", system-ui;
