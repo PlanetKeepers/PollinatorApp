@@ -722,20 +722,6 @@ body {
   color: white;
 }
 
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
-  .planet-keeper-text {
-    font-size: 40px; /* Adjust font size for smaller screens */
-  }
-
-  .planet-keeper-subtext {
-    font-size: 20px; /* Adjust font size for smaller screens */
-  }
-}
-
-.imageContainer {
-  position: relative;
-}
 .akaya {
   font-family: "Akaya Kanadaka", system-ui;
   font-weight: 400;
