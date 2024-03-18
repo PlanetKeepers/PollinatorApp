@@ -72,7 +72,7 @@ const connectionIcon = computed(() => (wallet.address ? "unplug" : "plug"));
   width: 100%;
   min-width: 0;
   max-width: 600px;
-  --spacing: 1em;
+  --spacing: 0.2em;
 }
 
 .connect-text {

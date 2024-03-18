@@ -5,26 +5,31 @@
       <h1 class="planet-keeper-text akaya">Planet Keeper</h1>
       <h2 class="planet-keeper-subtext akaya">
         An app for our pollinators, <br />
-        Built with Arweave and ao.
+        built with Arweave and ao.
       </h2>
     </div>
 
     <!-- link to: baseSourceUrl + /example/ + path -->
-    <WalletSelector v-model="inputUrl" class="wallet-selector" />
-    <div class="akaya" style="text-align: justify; max-width: 800px">
+    <WalletSelector class="wallet-selector" />
+    <div
+      class="akaya"
+      style="text-align: justify; max-width: 800px; margin-top: 40px"
+    >
       Connect your wallet to contribute data to pollinator data collection.
     </div>
+
     <CodeBox code="npm install arweave-wallet-connector" />
     <CodeBox :code="code[0]" />
     <div class="akaya" style="text-align: justify; max-width: 800px">
       Connect your wallet to contribute data to pollinator data collection.
     </div>
+
     <div class="button-container">
       <a class="button" href="https://github.com/PlanetKeepers">
         <Github />
         <span>View on Github</span>
       </a>
-      <a class="button" href="https://arweave.net/">
+      <a class="button" href="https://arweave.org/">
         <img src="/arweave.png" class="arweaveimage" />
         <span>Learn more about Arweave</span>
       </a>
@@ -52,7 +57,7 @@
           <span
             v-if="
               transactionData.target ===
-              'TId0Wix2KFl1gArtAT6Do1CbWU_0wneGvS5X9BfW5PE'
+              'VYaiM-y102iXBudmMpSsaGnPX4lcmb5Vwa3obl5Iuak'
             "
             >Donate? :</span
           >
@@ -192,7 +197,6 @@
 </template>
 
 <script setup lang="ts">
-import ArweaveOutlineLogo from "./components/icons/ArweaveOutlineLogo.vue";
 import WalletSelector from "./components/WalletSelector.vue";
 import CodeBox from "./components/CodeBox.vue";
 import Github from "./components/icons/Github.vue";
@@ -552,7 +556,7 @@ watch(currentStep, (value) => {
 
 <style scoped>
 .app {
-  --app-spacing: 48px;
+  --app-spacing: 10px;
   --spacing: 2em;
   display: flex;
   flex-direction: column;
