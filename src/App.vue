@@ -704,6 +704,15 @@ body {
   overflow: hidden;
 }
 
+.planet-keeper-text {
+  top: 30%; /* Adjust top position as needed */
+  font-size: 58px; /* Adjust font size as needed */
+}
+
+.planet-keeper-subtext {
+  top: 50%; /* Adjust top position as needed */
+  font-size: 30px; /* Adjust font size as needed */
+}
 .imageContainer {
   position: relative;
 }
