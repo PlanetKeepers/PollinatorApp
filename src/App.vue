@@ -25,7 +25,7 @@
         <span>View on Github</span>
       </a>
       <a class="button" href="https://arweave.net/">
-        <img src="../arweave.png" class="arweaveimage" />
+        <img src="/arweave.png" class="arweaveimage" />
         <span>Learn more about Arweave</span>
       </a>
     </div>
