@@ -4,7 +4,7 @@
       <img src="/banner.jpg" alt="Banner" class="bannerImage" />
       <div class="banner-text">
         <h1>Planet Keeper</h1>
-        <p>An app for our pollinators, built with Arweave and ao.</p>
+        <h2>An app for our pollinators, built with Arweave and ao.</h2>
       </div>
     </div>
     <!-- link to: baseSourceUrl + /example/ + path -->
