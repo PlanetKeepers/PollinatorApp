@@ -709,25 +709,35 @@ body {
   position: relative;
 }
 
-.planet-keeper-text {
+.planet-keeper-text,
+.planet-keeper-subtext {
   position: absolute;
-  top: 35%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   font-family: "Akaya Kanadaka", system-ui;
-  font-size: 58px; /* Adjust font size as needed */
   color: white;
   text-align: center;
 }
+
+.planet-keeper-text {
+  top: 30%; /* Adjust top position as needed */
+  font-size: 58px; /* Adjust font size as needed */
+}
+
 .planet-keeper-subtext {
-  position: absolute;
-  top: 52%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "Akaya Kanadaka", system-ui;
+  top: 50%; /* Adjust top position as needed */
   font-size: 30px; /* Adjust font size as needed */
-  color: white;
-  text-align: center;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .planet-keeper-text {
+    font-size: 40px; /* Adjust font size for smaller screens */
+  }
+
+  .planet-keeper-subtext {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
 }
 .akaya {
   font-family: "Akaya Kanadaka", system-ui;
@@ -743,14 +753,5 @@ body {
 .arweaveimage {
   width: 2.5em; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
-}
-
-.textOverlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
 }
 </style>
