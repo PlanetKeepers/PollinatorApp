@@ -54,7 +54,10 @@ const connect = () => {
   wallet.setUrl(model.value || wallet.url!);
   wallet.connect();
   data.loading = true;
-  wallet.once("change", () => (data.loading = false));
+  wallet.once("change", () => {
+    data.loading = false;
+    wallet.keepPopup = false; // Hide button after connection
+  });
 };
 const disconnect = () => wallet.disconnect();
 const togglePopup = () => (wallet.keepPopup = !wallet.keepPopup);

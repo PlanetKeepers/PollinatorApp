@@ -4,24 +4,13 @@
       <img src="/banner.jpg" alt="Banner" class="bannerImage" />
       <div class="banner-text">
         <h1>Planet Keeper</h1>
-        <h2>An app for our pollinators, built with Arweave and ao.</h2>
+        <h3>An app for our pollinators, built with Arweave and ao.</h3>
       </div>
     </div>
     <!-- link to: baseSourceUrl + /example/ + path -->
     <WalletSelector class="wallet-selector" />
-    <div
-      class="akaya"
-      style="
-        text-align: justify;
-        max-width: 800px;
-        margin-top: 40px;
-        margin-bottom: 40px;
-      "
-    >
-      Planet Keeper is an app focused on tracking the population status of our
-      pollinators around the globe.
-    </div>
 
+    <About />
     <CodeBox code="npm install arweave-wallet-connector" />
     <CodeBox :code="code[0]" />
 
@@ -208,6 +197,7 @@ import { reactive, ref, computed, watch } from "vue";
 import type Transaction from "arweave/web/lib/transaction";
 import type { DispatchResult } from "../../src/Arweave";
 import { track } from "./Analytics";
+import About from "./components/About.vue";
 
 // Here, we import an instance of a wrapper class made for the Vue
 // reactivity engine instead of importing the connector directly
