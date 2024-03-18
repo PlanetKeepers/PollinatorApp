@@ -13,16 +13,19 @@
     <WalletSelector class="wallet-selector" />
     <div
       class="akaya"
-      style="text-align: justify; max-width: 800px; margin-top: 40px"
+      style="
+        text-align: justify;
+        max-width: 800px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+      "
     >
-      Connect your wallet to contribute data to pollinator data collection.
+      Planet Keeper is an app focused on tracking the population status of our
+      pollinators around the globe.
     </div>
 
     <CodeBox code="npm install arweave-wallet-connector" />
     <CodeBox :code="code[0]" />
-    <div class="akaya" style="text-align: justify; max-width: 800px">
-      Connect your wallet to contribute data to pollinator data collection.
-    </div>
 
     <div class="button-container">
       <a class="button" href="https://github.com/PlanetKeepers">
@@ -702,6 +705,10 @@ body {
   height: auto;
 }
 
+.banner-wrapper {
+  position: relative;
+}
+
 .planet-keeper-text {
   position: absolute;
   top: 35%;
@@ -736,5 +743,14 @@ body {
 .arweaveimage {
   width: 2.5em; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
+}
+
+.textOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
 }
 </style>
