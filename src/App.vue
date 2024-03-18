@@ -1,18 +1,12 @@
 <template>
   <div class="app">
-    <div class="banner-wrapper">
+    <div class="akaya banner-container">
       <img src="/banner.jpg" alt="Banner" class="bannerImage" />
-      <div class="textOverlay">
-        <h1 class="planet-keeper-text akaya text-5xl md:text-6xl lg:text-8xl">
-          Planet Keeper
-        </h1>
-        <h2 class="planet-keeper-subtext akaya text-lg md:text-xl lg:text-4xl">
-          An app for our pollinators, <br />
-          built with Arweave and ao.
-        </h2>
+      <div class="banner-text">
+        <h1>Planet Keeper</h1>
+        <p>An app for our pollinators, built with Arweave and ao.</p>
       </div>
     </div>
-
     <!-- link to: baseSourceUrl + /example/ + path -->
     <WalletSelector class="wallet-selector" />
     <div
@@ -704,31 +698,28 @@ body {
   overflow: hidden;
 }
 
-.planet-keeper-text {
-  top: 30%; /* Adjust top position as needed */
-  font-size: 58px; /* Adjust font size as needed */
-}
-
-.planet-keeper-subtext {
-  top: 50%; /* Adjust top position as needed */
-  font-size: 30px; /* Adjust font size as needed */
-}
-.imageContainer {
-  position: relative;
+.banner-container {
+  position: relative; /* This allows absolute positioning of the text */
+  display: flex; /* Center the content horizontally */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
 }
 
 .bannerImage {
-  width: 100%;
-  height: auto;
+  width: 100%; /* Ensure image fills the container */
+  height: auto; /* Maintain image aspect ratio */
 }
 
-.textOverlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
+.banner-text {
+  position: absolute; /* Position the text on top of the image */
+  top: 50%; /* Center the text vertically */
+  left: 50%; /* Center the text horizontally */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Account for offset due to absolute positioning */
+  text-align: center; /* Center the text within the element */
+  color: white; /* Assuming white text for better contrast */
 }
 
 .akaya {
