@@ -11,9 +11,10 @@
     <WalletSelector class="wallet-selector" />
 
     <About />
+    <one />
     <DryRunButton />
     <Display />
-    <one />
+
     <div class="button-container" style="margin-top: 4em; margin-bottom: 1em">
       <a
         class="button"
@@ -294,14 +295,14 @@ const dispatchData = async () => {
     const transaction = await arweave.createTransaction(
       getTransactionDataOnly()
     );
-    transaction.addTag("Pollinator", "Pollinator");
-    transaction.addTag("Tag-1", "transaction tags are all displayed here");
-    transaction.addTag("Tag-2", "this is a real transaction");
+    transaction.addTag("Pollinator", "name of pollinator");
+    transaction.addTag("Status", "trending up, down, or sideways");
+    transaction.addTag("Vegetation", "what was pollinated");
     transaction.addTag(
-      "Tag-3",
-      "click accept and the wallet will do its best to"
+      "Food",
+      "What is their vegetation source, and is it in danger?"
     );
-    transaction.addTag("Tag-3.5", "include it into the arweave network");
+    transaction.addTag("Imminent threats", "Are there imminent threats?");
     const result = await wallet.dispatch(transaction);
     txUpload.value.dispatchResult = result;
     if (currentStep.value < 2) {
