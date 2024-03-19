@@ -15,7 +15,7 @@
 
 ```
 
-### Building roadmap
+### Building roadmap for Pollinators
 
 - [x] Start new template
 - [x] desktop Arweave wallet connect functionality
@@ -25,6 +25,9 @@
 - [] aos PlanetKeeper chatroom
 - [x] create beekeeper token and .lua file
   - templates are made but not tested yet
+- [x] start step one of the tutorial for users
+- [] start step two of the tutorial for users
+
 - [] tokengate PlanetKeeper chatroom
 - [] upload the website to Arweave to create a full stack Arweave app.
 - [] tutorial video
@@ -49,7 +52,11 @@ Send({Target = Router, Data = require('json').encode({hello = "world"})})
 
 - [] upload the website to Arweave to create a full stack Arweave app.
 
+### Building roadmap for Developers
+
+- [x] Start image folder of troubleshooting images
+
 ### Lessons Learned
 
-Tutorials can be most effective when the knowledge is given at a tempo or pace. We built ours so that each user fully absorbs that step before being able
-to move on to the next step. This interactivity creates a more engaging learning experience that can be more effective than traditional methods.
+- Tutorials can be most effective when the knowledge is given at a tempo or pace. We built ours so that each user fully absorbs that step before being able to move on to the next step. This interactivity creates a more engaging learning experience that can be more effective than traditional methods.
+- Not all templates are equal and it takes time to learn the boundaries of each one.

@@ -11,7 +11,7 @@
     <WalletSelector class="wallet-selector" />
 
     <About />
-
+    <DryRunButton />
     <one />
     <div class="button-container" style="margin-top: 4em; margin-bottom: 1em">
       <a
@@ -202,6 +202,7 @@ import type { DispatchResult } from "../../src/Arweave";
 import { track } from "./Analytics";
 import About from "./components/About.vue";
 import one from "./tutorial/one.vue";
+import DryRunButton from "./components/DryRunButton.vue";
 
 // Here, we import an instance of a wrapper class made for the Vue
 // reactivity engine instead of importing the connector directly
@@ -257,7 +258,7 @@ const signTransaction = async () => {
     transaction.addTag(
       "App-Name",
       +transactionData.quantity > 0 &&
-        transactionData.target === "TId0Wix2KFl1gArtAT6Do1CbWU_0wneGvS5X9BfW5PE"
+        transactionData.target === "xA2-DFx2Q-DO7K9drHQcqlPshkDcAWJ1CEOVDM0qqLw"
         ? "Dev donation"
         : "Trying out the connector"
     );
