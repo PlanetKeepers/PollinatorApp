@@ -3,7 +3,7 @@
     <div class="akaya banner-container">
       <img src="/banner.jpg" alt="Banner" class="bannerImage" />
       <div class="banner-text">
-        <h1>Planet Keeper</h1>
+        <h1>Pollinator</h1>
         <h3>An app for our pollinators, built with Arweave and ao.</h3>
       </div>
     </div>
