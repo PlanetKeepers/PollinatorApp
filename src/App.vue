@@ -12,7 +12,7 @@
 
     <About />
     <DryRunButton />
-    <Pollinator />
+
     <one />
     <div class="button-container" style="margin-top: 4em; margin-bottom: 1em">
       <a
@@ -204,7 +204,6 @@ import { track } from "./Analytics";
 import About from "./components/About.vue";
 import one from "./tutorial/one.vue";
 import DryRunButton from "./components/DryRunButton.vue";
-import Pollinator from "./components/Pollinator.vue";
 
 // Here, we import an instance of a wrapper class made for the Vue
 // reactivity engine instead of importing the connector directly
@@ -328,7 +327,7 @@ const signDataItem = async () => {
       new Buffer(
         await wallet.signDataItem({
           ...getTransactionDataOnly(),
-          tags: [{ name: "App-Name", value: "Trying out the connector" }],
+          tags: [{ name: "Pollinator", value: "Pollinator App" }],
         })
       )
     );
