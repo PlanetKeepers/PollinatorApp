@@ -12,7 +12,7 @@
 
     <About />
     <DryRunButton />
-
+    <Display />
     <one />
     <div class="button-container" style="margin-top: 4em; margin-bottom: 1em">
       <a
@@ -204,6 +204,7 @@ import { track } from "./Analytics";
 import About from "./components/About.vue";
 import one from "./tutorial/one.vue";
 import DryRunButton from "./components/DryRunButton.vue";
+import Display from "./components/Display.vue";
 
 // Here, we import an instance of a wrapper class made for the Vue
 // reactivity engine instead of importing the connector directly
@@ -227,7 +228,7 @@ watch(
   arInput,
   (value) => (transactionData.quantity = arweave.ar.arToWinston(value))
 );
-const message = ref("hello world");
+const message = ref("pollinator data");
 watch(message, (value) => (transactionData.data = value));
 const transactionData = reactive({
   target: "xA2-DFx2Q-DO7K9drHQcqlPshkDcAWJ1CEOVDM0qqLw",
@@ -257,11 +258,11 @@ const signTransaction = async () => {
   try {
     const transaction = await arweave.createTransaction({ ...transactionData });
     transaction.addTag(
-      "App-Name",
+      "Pollinator",
       +transactionData.quantity > 0 &&
         transactionData.target === "xA2-DFx2Q-DO7K9drHQcqlPshkDcAWJ1CEOVDM0qqLw"
-        ? "Dev donation"
-        : "Trying out the connector"
+        ? "Pollinator donation"
+        : "Pollinating the pollinators"
     );
     transaction.addTag("Pollinator", "transaction tags are all displayed here");
     transaction.addTag("Tag-2", "this is a real transaction");
@@ -293,7 +294,7 @@ const dispatchData = async () => {
     const transaction = await arweave.createTransaction(
       getTransactionDataOnly()
     );
-    transaction.addTag("App-Name", "Trying out the connector");
+    transaction.addTag("Pollinator", "Pollinator App");
     transaction.addTag("Tag-1", "transaction tags are all displayed here");
     transaction.addTag("Tag-2", "this is a real transaction");
     transaction.addTag(
