@@ -10,8 +10,8 @@
       "
     >
       Clicking the button below will trigger a dry run process illustrating the
-      data from the PlanetKeeper process, which is ID:
-      a8zR1JbHsJhFyI_tURmtNyi8YT1z6oFD7cE1zvovLzc
+      data from the PlanetKeeper process, which will be displayed after
+      processing the dry run.
     </p>
     <button @click="dryRunProcess">DryRun</button>
 
