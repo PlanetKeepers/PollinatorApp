@@ -19,6 +19,7 @@
 
 - [x] Start new template
 - [x] desktop Arweave wallet connect functionality
+- [x] mobile Arweave wallet connect functionality
 - [x] test SQLite
   - result: worked locally did not pass through vercel so could not include it
 - [] aos PlanetKeeper chatroom

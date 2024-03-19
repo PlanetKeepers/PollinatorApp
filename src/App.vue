@@ -11,8 +11,9 @@
     <WalletSelector class="wallet-selector" />
 
     <About />
+    <CodeBox code="let message = This is the start of your Arweave tutorial!" />
     <CodeBox code="npm install arweave-wallet-connector" />
-    <CodeBox :code="code[0]" />
+    <CodeBox :code="code[3]" />
 
     <div class="button-container">
       <a class="button" href="https://github.com/PlanetKeepers">
