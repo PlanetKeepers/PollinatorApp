@@ -1,10 +1,17 @@
 <template>
-  <div class="contribution-container">
-    <h1>Contribute to Preserving Pollinators</h1>
-    <button @click="showDetails">Learn More</button>
-    <p v-if="showDetails">
-      There are two ways to contribute to the preservation of pollinators:
-      collecting data and planting pollinator-friendly plants.
+  <div class="akaya contribution-container">
+    <h1>Learn how to contribute to pollinator preservation on Arweave</h1>
+    <button @click="toggleDetails">Learn More Here</button>
+    <p class="content" v-if="showDetails">
+      If you would like to contribute to pollinator preservation, there are
+      currently two ways to get involved: collecting population status data and
+      planting pollinator-friendly plants. Both ways involve creating a wallet
+      on Arweave which is the next step, so lucky you.
+    </p>
+    <p class="content" v-if="showDetails">
+      Creating a wallet on Arweave is not as complicated or as scary as it
+      sounds, but it is how you plug in to the Permaweb. But before you do, you
+      shoud understand the importance of creating a wallet and how it works.
     </p>
   </div>
 </template>
@@ -17,8 +24,9 @@ export default {
     };
   },
   methods: {
-    showDetails() {
-      this.showDetails = true;
+    toggleDetails() {
+      // Rename the method to toggleDetails
+      this.showDetails = !this.showDetails; // Toggle the value of showDetails
     },
   },
 };
@@ -31,8 +39,8 @@ export default {
   padding: 1em;
   border: 1px solid #1d1b9b;
   border-radius: 5px;
-  width: 50%;
-  max-width: 400px; /* Adjust width as needed */
+  width: 90%;
+  max-width: 900px; /* Adjust width as needed */
 }
 
 h1 {
@@ -50,5 +58,9 @@ button {
 
 p {
   margin-top: 1em;
+}
+
+.content {
+  font-size: x-large;
 }
 </style>

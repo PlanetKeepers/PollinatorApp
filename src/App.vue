@@ -11,7 +11,7 @@
     <WalletSelector class="wallet-selector" />
 
     <About />
-    <CodeBox code="Step 1: Press the plugin button to connect your wallet" />
+
     <one />
     <div class="button-container" style="margin-top: 4em; margin-bottom: 1em">
       <a
