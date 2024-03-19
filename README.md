@@ -26,6 +26,8 @@
 - [x] create beekeeper token and .lua file
   - templates are made but not tested yet
 - [] tokengate PlanetKeeper chatroom
+- [] upload the website to Arweave to create a full stack Arweave app.
+- [] tutorial video
 
 ```
 
@@ -46,3 +48,8 @@ lua
 Send({Target = Router, Data = require('json').encode({hello = "world"})})
 
 - [] upload the website to Arweave to create a full stack Arweave app.
+
+### Lessons Learned
+
+Tutorials can be most effective when the knowledge is given at a tempo or pace. We built ours so that each user fully absorbs that step before being able
+to move on to the next step. This interactivity creates a more engaging learning experience that can be more effective than traditional methods.

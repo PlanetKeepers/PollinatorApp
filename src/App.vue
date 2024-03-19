@@ -11,12 +11,16 @@
     <WalletSelector class="wallet-selector" />
 
     <About />
-    <CodeBox code="let message = This is the start of your Arweave tutorial!" />
-    <CodeBox code="npm install arweave-wallet-connector" />
+    <CodeBox code="Step 1: Press the plugin button to connect your wallet" />
+
     <CodeBox :code="code[3]" />
 
     <div class="button-container">
-      <a class="button" href="https://github.com/PlanetKeepers">
+      <a
+        class="button"
+        style="margin-right: 1em"
+        href="https://github.com/PlanetKeepers"
+      >
         <Github />
         <span>View on Github</span>
       </a>
@@ -711,6 +715,7 @@ body {
   ); /* Account for offset due to absolute positioning */
   text-align: center; /* Center the text within the element */
   color: white; /* Assuming white text for better contrast */
+  font-size: xx-large;
 }
 
 .akaya {

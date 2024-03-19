@@ -1,8 +1,6 @@
 <template>
   <div class="url-input">
-    <p class="connect-text">
-      Connect your Arweave.app wallet to contribute pollinator data
-    </p>
+    <p class="connect-text">Click the plug icon to enter the rabbit hole</p>
     <div class="actions">
       <transition name="fade">
         <Button

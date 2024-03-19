@@ -1,4 +1,14 @@
 <template>
-  <CodeBox code="npm install arweave-wallet-connector" />
-  <CodeBox :code="code[0]" />
+  <div
+    class="akaya"
+    style="
+      text-align: justify;
+      max-width: 800px;
+      font-size: x-large;
+      justify-content: center;
+      text-align: center;
+    "
+  >
+    step one
+  </div>
 </template>
