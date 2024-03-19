@@ -294,7 +294,7 @@ const dispatchData = async () => {
     const transaction = await arweave.createTransaction(
       getTransactionDataOnly()
     );
-    transaction.addTag("Pollinator", "Pollinator App");
+    transaction.addTag("Pollinator", "Pollinator");
     transaction.addTag("Tag-1", "transaction tags are all displayed here");
     transaction.addTag("Tag-2", "this is a real transaction");
     transaction.addTag(
