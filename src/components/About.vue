@@ -11,13 +11,12 @@
   >
     <p style="font-size: xxx-large">About</p>
     <p>
-      Planet Keeper is focused on tracking the population status of our
-      pollinators around the globe and contributing to their preservation. Data
-      loss, data categoriazation, and data integrity are major concerns when
-      collecting, storing, and analyzing data for our pollinators around the
-      globe. Arweave is a global computer that allows us to store data
-      permanently while giving the participants the ability to contribute to
-      that data.
+      Pollinator is focused on tracking the population status of our pollinators
+      around the globe and contributing to their preservation. Data loss, data
+      categoriazation, and data integrity are major concerns when collecting,
+      storing, and analyzing data for our pollinators around the globe. Arweave
+      is a global computer that allows us to store data permanently while giving
+      the participants the ability to contribute to that data.
     </p>
     <p>
       Of the 4,000+ species of bees in the United States, we only know the

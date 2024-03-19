@@ -13,9 +13,7 @@
     <About />
     <CodeBox code="Step 1: Press the plugin button to connect your wallet" />
 
-    <CodeBox :code="code[3]" />
-
-    <div class="button-container" style="margin-top: 3em">
+    <div class="button-container" style="margin-top: 4em; margin-bottom: 1em">
       <a
         class="button"
         style="margin-right: 1em"
