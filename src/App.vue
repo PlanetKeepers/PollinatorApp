@@ -12,7 +12,7 @@
 
     <About />
     <CodeBox code="Step 1: Press the plugin button to connect your wallet" />
-
+    <one />
     <div class="button-container" style="margin-top: 4em; margin-bottom: 1em">
       <a
         class="button"
@@ -201,6 +201,7 @@ import type Transaction from "arweave/web/lib/transaction";
 import type { DispatchResult } from "../../src/Arweave";
 import { track } from "./Analytics";
 import About from "./components/About.vue";
+import one from "./tutorial/one.vue";
 
 // Here, we import an instance of a wrapper class made for the Vue
 // reactivity engine instead of importing the connector directly
