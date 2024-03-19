@@ -1,6 +1,6 @@
 <template>
   <div class="url-input">
-    <p class="connect-text">Click the icon to plug in to Arweave</p>
+    <p class="connect-text">Click the icon to plug in to the Permaweb</p>
     <div class="actions">
       <transition name="fade">
         <Button

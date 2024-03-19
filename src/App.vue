@@ -15,7 +15,7 @@
 
     <CodeBox :code="code[3]" />
 
-    <div class="button-container">
+    <div class="button-container" style="margin-top: 3em">
       <a
         class="button"
         style="margin-right: 1em"
@@ -567,11 +567,17 @@ watch(currentStep, (value) => {
     --app-spacing: 24px;
     --spacing: 1.5em;
   }
+  .banner-text {
+    font-size: large;
+  }
 }
 
 @media (max-width: 399px) {
   .app {
     --app-spacing: 12px;
+  }
+  .banner-text {
+    font-size: medium;
   }
 }
 
