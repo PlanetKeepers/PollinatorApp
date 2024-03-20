@@ -29,12 +29,15 @@
 - [x] start step one of the tutorial for users
 - [] start step two of the tutorial for users
 - [x] implement dryrun using Planet Keepers aos process
-- [] create #pollinator tag for future transactions
+- [x] create #pollinator tag for future transactions
+- []
 - [] submit first #pollinator transaction
 - [] get arns testnet tokens
 - [] purchase domain
 - [] create permage account and profile
 - [] deploy website to permapages
+  - turns out a Vue / Vite app is not supported by permapages
+- [] use the [dragon deploy](https://dragondeploy.xyz/) to deploy the website
 - [] create hackathon summary
 - [] tokengate PlanetKeeper chatroom
 - [] tutorial video
@@ -46,14 +49,6 @@
 
 - [] encoding data as json
   When sending data to another process or an external service, you may want to use JSON as a way to encode the data for recipients. Using the json module in lua, you can encode and decode pure lua tables that contain values.
-
-lua
-
-```bash
-Send({Target = Router, Data = require('json').encode({hello = "world"})})
-```
-
-- [] upload the website to Permapges to create a full-stack Arweave app.
 
 ### Building roadmap for Developers
 

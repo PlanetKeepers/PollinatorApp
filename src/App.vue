@@ -103,49 +103,43 @@
         "
       >
         <template v-if="txUpload.signResult">
-          <div>Why choose .signTransaction()?</div>
+          <div>Thank you!!</div>
+          <div>Youre pollinating the pollinators with this now!</div>
           <div>
-            After the signature is applied by the user, you have full control on
-            the way that the transaction is submitted to the arweave network
-          </div>
-          <div>
-            For example: when interacting with a smart contract, instead of
-            using dispatch (which would handle everything automatically), use
-            this method to make sure that your interactions are not submitted to
-            a bundler service or, force them to use your own that's compatible
-            with the runtime
+            All financial contributions will be tracked, displayed, and
+            transparently used to support the pollinators. More to come on this
+            soon though our work-in-progress can be seen here. (link to the
+            whitepaper
           </div>
         </template>
         <template v-if="txUpload.dispatchResult">
-          <div>Why choose .dispatch()?</div>
+          <div>Thank you for contributing!</div>
           <div v-if="parseFloat(arInput) > 0">
-            You can transfer AR tokens using the dispatch method. However, the
-            transfer amount was automatically set to 0 in this example so that
-            the wallet provider can use the preferred bundler service by
-            default. Normally, when transferring AR tokens, the provider will
-            likely choose to use base transactions instead of bundled ones by
-            default
+            Your contribution matters and empowers the pollinators. Lets
+            continue to grow the database and support the pollinators.
           </div>
           <div v-else>
-            The wallet provider can select the preferred bundler service. When
-            transferring AR tokens, the provider will likely choose to use base
-            transactions instead of bundled ones by default
+            However, none of this would be possible without Arweave and the
+            ability to use it as a database. Whether you realize it or not, you
+            just contributed to the start of what will be the largest database
+            of pollinators in the world.
           </div>
-          <div>Free storage for users 🤯 (potentially)</div>
+          <div>
+            And best of all, because our transactions are under a certain size,
+            they are free!
+          </div>
           <div>
             Data only transactions going through the bundling service are
             currently subsidized (up to a specific size limit), this allows for
-            accounts with no funds to also be able to commit permanent data
+            accounts with no funds to also be able to commit permanent data.
           </div>
         </template>
         <template v-if="txUpload.signDataItemResult">
-          <div>Why choose .signDataItem()?</div>
+          <div>This may come in handy</div>
           <div>
-            In some scenarios, you may need to process and submit DataItems to a
+            In some scenarios, web may need to process and submit DataItems to a
             specific bundler. If the latter does not specifically apply to your
-            use case, the .dispatch() method is a better choice. Make sure that
-            you understand the implications of the DataItem "anchor" field and
-            replay attacks
+            use case, the .dispatch() method is a better choice.
           </div>
         </template>
         <div
@@ -231,7 +225,7 @@ watch(
   arInput,
   (value) => (transactionData.quantity = arweave.ar.arToWinston(value))
 );
-const message = ref("pollinator data");
+const message = ref("gotta pollinate the pollinators");
 watch(message, (value) => (transactionData.data = value));
 const transactionData = reactive({
   target: "xA2-DFx2Q-DO7K9drHQcqlPshkDcAWJ1CEOVDM0qqLw",
