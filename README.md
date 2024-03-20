@@ -61,3 +61,10 @@ Vue and Vite are used to create the front-end of the website. The website is hos
 
 - Tutorials can be most effective when the knowledge is given at a tempo or pace. We built ours so that each user fully absorbs that step before being able to move on to the next step. This interactivity creates a more engaging learning experience that can be more effective than traditional methods.
 - Not all templates are equal and it takes time to learn the boundaries of each one.
+
+### Intro
+
+<video width="320" height="240" controls>
+  <source src="/public/intro.m4a" type="video/m4a">
+  Your browser does not support the video tag.
+</video>
