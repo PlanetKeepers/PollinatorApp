@@ -62,8 +62,6 @@ Vue and Vite are used to create the front-end of the website. The website is hos
 - Tutorials can be most effective when the knowledge is given at a tempo or pace. We built ours so that each user fully absorbs that step before being able to move on to the next step. This interactivity creates a more engaging learning experience that can be more effective than traditional methods.
 - Not all templates are equal and it takes time to learn the boundaries of each one.
 
-### Intro
+### Video demo link
 
-["Intro"](/public/intro.mp4)
-
-["Pollinator App Demo"](/public/pollinator.mp4)
+["Link to youtube demo"](https://www.youtube.com/watch?v=K-ebM9_GoUU)
