@@ -86,6 +86,9 @@ const statusInput = ref("");
 const vegetationInput = ref("");
 const foodInput = ref("");
 const threatsInput = ref("");
+const countryInput = ref("");
+const regionInput = ref("");
+const cityInput = ref("");
 
 const dispatchData = async () => {
   // Your dispatchData function implementation
