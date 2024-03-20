@@ -46,33 +46,6 @@
         placeholder="Enter imminent threats"
       />
     </div>
-    <div>
-      <label for="countryInput">Country</label>
-      <input
-        type="text"
-        id="countryInput"
-        v-model="countryInput"
-        placeholder="Enter your country"
-      />
-    </div>
-    <div>
-      <label for="regionInput">Region</label>
-      <input
-        type="text"
-        id="regionInput"
-        v-model="regionInput"
-        placeholder="Enter your region"
-      />
-    </div>
-    <div>
-      <label for="cityInput">City</label>
-      <input
-        type="text"
-        id="cityInput"
-        v-model="cityInput"
-        placeholder="Enter your city"
-      />
-    </div>
 
     <button @click="dispatchData">Submit</button>
   </div>
@@ -86,9 +59,6 @@ const statusInput = ref("");
 const vegetationInput = ref("");
 const foodInput = ref("");
 const threatsInput = ref("");
-const countryInput = ref("");
-const regionInput = ref("");
-const cityInput = ref("");
 
 const dispatchData = async () => {
   // Your dispatchData function implementation

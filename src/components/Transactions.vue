@@ -4,8 +4,6 @@
     <p v-if="loading">Loading...</p>
     <template v-if="!loading && transaction">
       <p>Transaction ID: {{ transaction.id }}</p>
-      <p>Block ID: {{ transaction.block.id }}</p>
-      <p>Timestamp: {{ formatTimestamp(transaction.block.timestamp) }}</p>
       <p>Tags:</p>
       <ul>
         <li v-for="tag in transaction.tags" :key="tag.name">
@@ -31,6 +29,7 @@ const transaction = ref(null);
 
 const fetchLatestPollinatorTransaction = async () => {
   try {
+    // Construct the GraphQL query to fetch transactions with the "Pollinator" tag
     const queryObject = {
       query: `
         {
@@ -38,10 +37,6 @@ const fetchLatestPollinatorTransaction = async () => {
             edges {
               node {
                 id
-                block {
-                  id
-                  timestamp
-                }
                 tags {
                   name
                   value
@@ -53,23 +48,11 @@ const fetchLatestPollinatorTransaction = async () => {
       `,
     };
 
-    const response = await fetch("https://arweave.net/graphql", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(queryObject),
-    });
-
-    if (!response.ok) {
-      throw new Error(
-        `Failed to fetch data: ${response.status} ${response.statusText}`
-      );
-    }
-
+    // Send the query to the Arweave GraphQL endpoint
+    const response = await arweave.api.post("/graphql", queryObject);
     const responseData = await response.json();
 
+    // Extract the latest transaction from the response
     if (responseData.data.transactions.edges.length > 0) {
       transaction.value = responseData.data.transactions.edges[0].node;
     }
@@ -80,10 +63,6 @@ const fetchLatestPollinatorTransaction = async () => {
   }
 };
 
-const formatTimestamp = (timestamp) => {
-  const date = new Date(timestamp * 1000); // Convert seconds to milliseconds
-  return date.toLocaleString(); // Format timestamp as local date and time string
-};
-
+// Fetch the latest pollinator transaction when the component is mounted
 onMounted(fetchLatestPollinatorTransaction);
 </script>
