@@ -64,7 +64,4 @@ Vue and Vite are used to create the front-end of the website. The website is hos
 
 ### Intro
 
-<video width="320" height="240" controls>
-  <source src="/public/intro.m4a" type="video/m4a">
-  Your browser does not support the video tag.
-</video>
+["Intro"](/public/intro.m4a)
