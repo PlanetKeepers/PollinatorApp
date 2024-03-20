@@ -51,7 +51,7 @@
       <input
         type="text"
         id="countryInput"
-        v-model="threatsInput"
+        v-model="countryInput"
         placeholder="Enter your country"
       />
     </div>
@@ -60,7 +60,7 @@
       <input
         type="text"
         id="regionInput"
-        v-model="threatsInput"
+        v-model="regionInput"
         placeholder="Enter your region"
       />
     </div>
@@ -69,7 +69,7 @@
       <input
         type="text"
         id="cityInput"
-        v-model="threatsInput"
+        v-model="cityInput"
         placeholder="Enter your city"
       />
     </div>
