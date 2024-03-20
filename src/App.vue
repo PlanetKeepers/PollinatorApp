@@ -13,7 +13,7 @@
     <About />
     <one />
     <DryRunButton />
-    <Display />
+    <Transactions />
 
     <div class="button-container" style="margin-top: 4em; margin-bottom: 1em">
       <a
@@ -52,7 +52,7 @@
           <span
             v-if="
               transactionData.target ===
-              'VYaiM-y102iXBudmMpSsaGnPX4lcmb5Vwa3obl5Iuak'
+              'xA2-DFx2Q-DO7K9drHQcqlPshkDcAWJ1CEOVDM0qqLw'
             "
             >Donate? :</span
           >
@@ -205,11 +205,11 @@ import { track } from "./Analytics";
 import About from "./components/About.vue";
 import one from "./tutorial/one.vue";
 import DryRunButton from "./components/DryRunButton.vue";
-import Display from "./components/Display.vue";
 
 // Here, we import an instance of a wrapper class made for the Vue
 // reactivity engine instead of importing the connector directly
 import { wallet } from "./ReactiveWallet";
+import Transactions from "./components/Transactions.vue";
 
 const arweave = Arweave.init({
   host: "arweave.net",
@@ -743,3 +743,4 @@ body {
   height: auto; /* Maintain aspect ratio */
 }
 </style>
+./components/tx.vue./components/test.vue

@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" class="no-scrollbar">
   <head>
+    <script src="https://unpkg.com/arweave@1.12.6/bundles/web.bundle.min.js"></script>
+    <script src="https://unpkg.com/arweave/bundles/web.bundle.js"></script>
+    <script>
+      const arweave = Arweave.init({});
+      arweave.network.getInfo().then(console.log);
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
