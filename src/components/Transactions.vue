@@ -29,11 +29,10 @@ const transaction = ref(null);
 
 const fetchLatestPollinatorTransaction = async () => {
   try {
-    // Construct the GraphQL query to fetch transactions with the "Pollinator" tag
     const queryObject = {
       query: `
         {
-          transactions(tags: [{ name: "Pollinator" }], first: 1, sort: HEIGHT_DESC) {
+          transactions(tags: [{ name: "Pollinator", values: ["Pollinator"] }]) {
             edges {
               node {
                 id
@@ -48,11 +47,23 @@ const fetchLatestPollinatorTransaction = async () => {
       `,
     };
 
-    // Send the query to the Arweave GraphQL endpoint
-    const response = await arweave.api.post("/graphql", queryObject);
+    const response = await fetch("https://arweave.net/graphql", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(queryObject),
+    });
+
+    if (!response.ok) {
+      throw new Error(
+        `Failed to fetch data: ${response.status} ${response.statusText}`
+      );
+    }
+
     const responseData = await response.json();
 
-    // Extract the latest transaction from the response
     if (responseData.data.transactions.edges.length > 0) {
       transaction.value = responseData.data.transactions.edges[0].node;
     }
