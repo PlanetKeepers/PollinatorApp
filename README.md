@@ -1,20 +1,23 @@
 # Planet Keeper Hack the Weave submission
 
+### What is the dApp stack?
+
+- Vue and Vite for the front-end of the website
+- Arweave for the blockchain, database, and authentication
+- ao for the communication, processes, and more
+- dragondeploy for the deployment of the website costing $0.13 once.
+- deployed to pollinator.arweave.dev though here is the long form of the website:
+  https://4yzpih7vzwg6sgoc6ozobpm2k3qia75brzqke6mihjsgoqdx2e6q.arweave.net/5jL0H_XNjekZwvOy4L2aVuCAf6GOYKJ5iDpkZ0B30T0/
+
+Vue and Vite are used to create the front-end of the website. The website is hosted on Arweave and uses Arweave for the blockchain, database, and authentication. The communication, processes, and more are handled by ao.
+
 ### Troubles
 
 - tailwind docs do not list one step of adding the new index.css file as an import to the main.tsx file
-- SQL addition being accepted by vercel
+- SQL addition not being accepted by vercel
+  -vercel was only used to deploy for testing, but a sample website can be seen there at [pollinator.vercel.app](https://pollinator.vercel.app/)
 - the wallet connect import did not work, so I had to use their actual template to add the Arweave wallet connect functionaltiy
 - the wallet connect functionality works on the desktop, but not on the mobile so far.
--
-
-```
-
-  <script type="module" src="/sqlite/main.js"></script>
-  <pre class="main"></pre>
-  <pre class="worker"></pre>
-
-```
 
 ### Building / Hackathon roadmap for Pollinators
 
