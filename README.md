@@ -64,4 +64,6 @@ Vue and Vite are used to create the front-end of the website. The website is hos
 
 ### Intro
 
-["Intro"](/public/intro.m4a)
+["Intro"](/public/intro.mp4)
+
+["Pollinator App Demo"](/public/pollinator.mp4)
