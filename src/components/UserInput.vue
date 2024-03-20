@@ -2,39 +2,39 @@
   <div>
     <h1>Enter Tag Information</h1>
     <div>
-      <label for="pollinatorInput">Pollinator:</label>
+      <label for="pollinatorInput">Pollinator</label>
       <input
         type="text"
         id="pollinatorInput"
         v-model="pollinatorInput"
-        placeholder="Enter name of pollinator"
+        placeholder="Just type 'Pollinator' here"
       />
     </div>
     <div>
-      <label for="statusInput">Status:</label>
+      <label for="statusInput">Name:</label>
       <input
         type="text"
         id="statusInput"
         v-model="statusInput"
-        placeholder="Enter trending status"
+        placeholder="Name of pollinator"
       />
     </div>
     <div>
-      <label for="vegetationInput">Vegetation:</label>
+      <label for="vegetationInput">Status:</label>
       <input
         type="text"
         id="vegetationInput"
         v-model="vegetationInput"
-        placeholder="Enter type of vegetation"
+        placeholder="Declining, inclining, or stable"
       />
     </div>
     <div>
-      <label for="foodInput">Food:</label>
+      <label for="foodInput">Vegetation:</label>
       <input
         type="text"
         id="foodInput"
         v-model="foodInput"
-        placeholder="Enter source of food"
+        placeholder="Enter type of vegetation"
       />
     </div>
     <div>
