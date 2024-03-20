@@ -30,7 +30,7 @@
 - [] start step two of the tutorial for users
 - [x] implement dryrun using Planet Keepers aos process
 - [x] create #pollinator tag for future transactions
-- []
+- [] add whitepaper to the website
 - [] submit first #pollinator transaction
 - [] get arns testnet tokens
 - [] purchase domain
