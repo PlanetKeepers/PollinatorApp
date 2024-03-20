@@ -294,9 +294,9 @@ const dispatchData = async () => {
 
     // Add tags with user input
     transaction.addTag("Pollinator", pollinatorInput.value);
+    transaction.addTag("Name", nameInput.value);
     transaction.addTag("Status", statusInput.value);
     transaction.addTag("Vegetation", vegetationInput.value);
-    transaction.addTag("Food", foodInput.value);
     transaction.addTag("Imminent threats", threatsInput.value);
 
     const result = await wallet.dispatch(transaction);

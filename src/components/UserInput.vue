@@ -11,30 +11,30 @@
       />
     </div>
     <div>
-      <label for="statusInput">Name:</label>
+      <label for="nameInput">Name:</label>
       <input
         type="text"
-        id="statusInput"
-        v-model="statusInput"
+        id="nameInput"
+        v-model="nameInput"
         placeholder="Name of pollinator"
       />
     </div>
     <div>
-      <label for="vegetationInput">Status:</label>
+      <label for="statusInput">Status:</label>
       <input
         type="text"
-        id="vegetationInput"
-        v-model="vegetationInput"
+        id="statusInput"
+        v-model="statusInput"
         placeholder="Declining, inclining, or stable"
       />
     </div>
     <div>
-      <label for="foodInput">Vegetation:</label>
+      <label for="vegetationInput">Vegetation:</label>
       <input
         type="text"
-        id="foodInput"
-        v-model="foodInput"
-        placeholder="Enter type of vegetation"
+        id="vegetationInput"
+        v-model="vegetationInput"
+        placeholder="Enter vegetation pollinating"
       />
     </div>
     <div>
@@ -43,7 +43,7 @@
         type="text"
         id="threatsInput"
         v-model="threatsInput"
-        placeholder="Enter imminent threats"
+        placeholder="Enter imminent threats, if any"
       />
     </div>
 
@@ -55,9 +55,9 @@
 import { ref } from "vue";
 
 const pollinatorInput = ref("");
+const nameInput = ref("");
 const statusInput = ref("");
 const vegetationInput = ref("");
-const foodInput = ref("");
 const threatsInput = ref("");
 
 const dispatchData = async () => {
