@@ -104,12 +104,11 @@
       >
         <template v-if="txUpload.signResult">
           <div>Thank you!!</div>
-          <div>Youre pollinating the pollinators with this now!</div>
+          <div>You're pollinating the pollinators with this now!</div>
           <div>
             All financial contributions will be tracked, displayed, and
             transparently used to support the pollinators. More to come on this
-            soon though our work-in-progress can be seen here. (link to the
-            whitepaper
+            soon though our work-in-progress can be seen here.
           </div>
         </template>
         <template v-if="txUpload.dispatchResult">
@@ -261,12 +260,8 @@ const signTransaction = async () => {
         ? "Pollinator donation"
         : "Pollinating the pollinators"
     );
-    transaction.addTag("Pollinator", "transaction tags are all displayed here");
-    transaction.addTag("Tag-2", "this is a real transaction");
-    transaction.addTag(
-      "Tag-3",
-      "you can sign it here and not send it on the next page"
-    );
+    transaction.addTag("Pollinator", "Pollinator");
+
     await wallet.signTransaction(transaction);
     txUpload.value.signResult = transaction;
     if (currentStep.value < 2) {
