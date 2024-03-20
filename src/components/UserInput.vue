@@ -46,6 +46,34 @@
         placeholder="Enter imminent threats"
       />
     </div>
+    <div>
+      <label for="countryInput">Country</label>
+      <input
+        type="text"
+        id="countryInput"
+        v-model="threatsInput"
+        placeholder="Enter your country"
+      />
+    </div>
+    <div>
+      <label for="regionInput">Region</label>
+      <input
+        type="text"
+        id="regionInput"
+        v-model="threatsInput"
+        placeholder="Enter your region"
+      />
+    </div>
+    <div>
+      <label for="cityInput">City</label>
+      <input
+        type="text"
+        id="cityInput"
+        v-model="threatsInput"
+        placeholder="Enter your city"
+      />
+    </div>
+
     <button @click="dispatchData">Submit</button>
   </div>
 </template>

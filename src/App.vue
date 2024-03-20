@@ -304,6 +304,9 @@ const dispatchData = async () => {
     transaction.addTag("Vegetation", vegetationInput.value);
     transaction.addTag("Food", foodInput.value);
     transaction.addTag("Imminent threats", threatsInput.value);
+    transaction.addTag("Country", countryInput.value);
+    transaction.addTag("Region", regionInput.value);
+    transaction.addTag("City", cityInput.value);
 
     const result = await wallet.dispatch(transaction);
     txUpload.value.dispatchResult = result;

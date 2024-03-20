@@ -4,6 +4,8 @@
     <p v-if="loading">Loading...</p>
     <template v-if="!loading && transaction">
       <p>Transaction ID: {{ transaction.id }}</p>
+      <p>Block ID: {{ transaction.block.id }}</p>
+      <p>Timestamp: {{ formatTimestamp(transaction.block.timestamp) }}</p>
       <p>Tags:</p>
       <ul>
         <li v-for="tag in transaction.tags" :key="tag.name">
@@ -32,10 +34,14 @@ const fetchLatestPollinatorTransaction = async () => {
     const queryObject = {
       query: `
         {
-          transactions(tags: [{ name: "Pollinator", values: ["Pollinator"] }]) {
+          transactions(tags: [{ name: "Pollinator" }], first: 1, sort: HEIGHT_DESC) {
             edges {
               node {
                 id
+                block {
+                  id
+                  timestamp
+                }
                 tags {
                   name
                   value
@@ -74,6 +80,10 @@ const fetchLatestPollinatorTransaction = async () => {
   }
 };
 
-// Fetch the latest pollinator transaction when the component is mounted
+const formatTimestamp = (timestamp) => {
+  const date = new Date(timestamp * 1000); // Convert seconds to milliseconds
+  return date.toLocaleString(); // Format timestamp as local date and time string
+};
+
 onMounted(fetchLatestPollinatorTransaction);
 </script>
