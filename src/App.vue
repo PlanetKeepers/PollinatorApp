@@ -76,6 +76,7 @@
           <input v-model="message" style="flex: 1 1 0; text-align: right" />
         </div>
       </div>
+      <UserInput />
       <div class="row" style="flex-wrap: wrap">
         <button class="button" v-if="wallet.address" @click="signTransaction">
           <Rule />
@@ -205,6 +206,7 @@ import { track } from "./Analytics";
 import About from "./components/About.vue";
 import one from "./tutorial/one.vue";
 import DryRunButton from "./components/DryRunButton.vue";
+import UserInput from "./components/UserInput.vue";
 
 // Here, we import an instance of a wrapper class made for the Vue
 // reactivity engine instead of importing the connector directly
@@ -295,14 +297,14 @@ const dispatchData = async () => {
     const transaction = await arweave.createTransaction(
       getTransactionDataOnly()
     );
-    transaction.addTag("Pollinator", "name of pollinator");
-    transaction.addTag("Status", "trending up, down, or sideways");
-    transaction.addTag("Vegetation", "what was pollinated");
-    transaction.addTag(
-      "Food",
-      "What is their vegetation source, and is it in danger?"
-    );
-    transaction.addTag("Imminent threats", "Are there imminent threats?");
+
+    // Add tags with user input
+    transaction.addTag("Pollinator", pollinatorInput.value);
+    transaction.addTag("Status", statusInput.value);
+    transaction.addTag("Vegetation", vegetationInput.value);
+    transaction.addTag("Food", foodInput.value);
+    transaction.addTag("Imminent threats", threatsInput.value);
+
     const result = await wallet.dispatch(transaction);
     txUpload.value.dispatchResult = result;
     if (currentStep.value < 2) {
